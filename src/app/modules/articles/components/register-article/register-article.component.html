@@ -1,1 +1,190 @@
-<p>register-article works!</p>
+<div class="register-article">
+    <div class="box-title-modal">
+      <span class="register-article__title">Registrar</span>
+    </div>
+    <form
+      [formGroup]="registerArticleForm"
+      autocomplete="off">
+      <div class="register-article__section">
+        <mat-form-field class="register-article__item">
+          <mat-label class="label-input">Code</mat-label>
+          <input
+            matInput
+            formControlName="code"
+          />
+          <mat-error *ngIf="code.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error *ngIf="code.errors?.minlength">
+            Debe tener m&iacute;nimo 4 caracteres.
+          </mat-error>
+          <mat-error *ngIf="code.errors?.maxlength">
+            Debe tener m&aacute;ximo 6 caracteres.
+          </mat-error>
+          <mat-error *ngIf="code.errors?.pattern">
+            Admite letras may&uacute;sculas, min&uacute;sculas,
+            n&uacute;meros, puntos y gui&oacute;n medio.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="register-article__item">
+          <mat-label class="label-input">name</mat-label>
+          <input
+            matInput
+            formControlName="name"
+          />
+          <mat-error *ngIf="name.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error *ngIf="name.errors?.minlength">
+            Debe tener m&iacute;nimo 4 caracteres.
+          </mat-error>
+          <mat-error *ngIf="name.errors?.maxlength">
+            Debe tener m&aacute; 24 caracteres.
+          </mat-error>
+          <mat-error *ngIf="name.errors?.pattern">
+            Solo n&uacute;meros.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="register-article__section">
+        <mat-form-field class="register-article__item">
+          <mat-label class="label-input">Adress</mat-label>
+          <input
+            matInput
+            formControlName="adress"
+          />
+          <mat-error *ngIf="adress.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error *ngIf="adress.errors?.minlength">
+            Debe tener m&iacute;nimo 4 caracteres.
+          </mat-error>
+          <mat-error *ngIf="adress.errors?.maxlength">
+            Debe tener m&aacute;ximo 100 caracteres.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="register-article__item">
+          <mat-label class="label-input">Population</mat-label>
+          <input
+            matInput
+            formControlName="population"
+          />
+          <mat-error *ngIf="population.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error *ngIf="population.errors?.minlength">
+            Debe tener m&iacute;nimo 2 caracteres.
+          </mat-error>
+          <mat-error *ngIf="population.errors?.maxlength">
+            Debe tener m&aacute; 10 caracteres.
+          </mat-error>
+          <mat-error *ngIf="population.errors?.pattern">
+            Solo n&uacute;meros.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="register-article__section">
+        <mat-form-field class="register-article__item">
+          <mat-label class="label-input">Postal Code</mat-label>
+          <input
+            matInput
+            formControlName="postalCode"
+          />
+          <mat-error *ngIf="postalCode.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error *ngIf="postalCode.errors?.minlength">
+            Debe tener m&iacute;nimo 2 caracteres.
+          </mat-error>
+          <mat-error *ngIf="postalCode.errors?.maxlength">
+            Debe tener m&aacute; 10 caracteres.
+          </mat-error>
+          <mat-error *ngIf="postalCode.errors?.pattern">
+            Solo n&uacute;meros.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="register-article__item">
+          <mat-label class="label-input">City</mat-label>
+          <input
+            matInput
+            formControlName="city"
+          />
+          <mat-error *ngIf="city.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error *ngIf="city.errors?.minlength">
+            Debe tener m&iacute;nimo 2 caracteres.
+          </mat-error>
+          <mat-error *ngIf="city.errors?.maxlength">
+            Debe tener m&aacute; 10 caracteres.
+          </mat-error>
+          <mat-error *ngIf="city.errors?.pattern">
+           Ciudad invalida
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="register-article__section">
+        <mat-form-field class="register-article__item">
+          <mat-label class="label-input">phone</mat-label>
+          <input
+            matInput
+            formControlName="phone"
+          />
+          <mat-error *ngIf="phone.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error *ngIf="phone.errors?.minlength">
+            Debe tener m&iacute;nimo 2 caracteres.
+          </mat-error>
+          <mat-error *ngIf="phone.errors?.maxlength">
+            Debe tener m&aacute; 10 caracteres.
+          </mat-error>
+          <mat-error *ngIf="phone.errors?.pattern">
+            Solo n&uacute;meros.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="register-article__item">
+          <mat-label class="label-input">Email</mat-label>
+          <input
+            matInput
+            formControlName="email"
+          />
+          <mat-error *ngIf="email.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error *ngIf="email.errors?.minlength">
+            Debe tener m&iacute;nimo 2 caracter.
+          </mat-error>
+          <mat-error *ngIf="email.errors?.maxlength">
+            Debe tener m&aacute; 24 caracter.
+          </mat-error>
+          <mat-error *ngIf="email.errors?.pattern">
+           Correo invalido.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="register-article__button-box">
+        <button
+          class="btn-add"
+          [ngClass]="{'register-article__disabled':!registerArticleForm.valid}"
+          [disabled]="!registerArticleForm.valid"
+          (click)="register()"
+          tabindex="-1"
+        >
+          Registrar
+        </button>
+        <button
+          class="btn-cancel"
+          (click)="close()"
+          tabindex="-1"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>

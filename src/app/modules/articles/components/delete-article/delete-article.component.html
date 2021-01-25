@@ -1,0 +1,27 @@
+<div class="delete-article">
+  <div class="box-title-modal">
+    <span class="delete-article__title">Eliminar</span>
+  </div>
+
+  <div class="delete-article__sub-title-box">
+    <span class="delete-article__sub-title">Esta a punto de eliminar el siguiente articulo : </span>
+    <div><span class="delete-article__label"> Code : </span> <span> {{data.code}}</span></div>
+    <div><span class="delete-article__label"> Name : </span> <span> {{data.name}}</span></div>
+  </div>
+  <div class="delete-article__button-box">
+    <button
+      class="btn-add"
+      (click)="delete()"
+      tabindex="-1"
+    >
+      Eliminar
+    </button>
+    <button
+      class="btn-cancel"
+      (click)="close()"
+      tabindex="-1"
+    >
+      Cancelar
+    </button>
+  </div>
+</div>

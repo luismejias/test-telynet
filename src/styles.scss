@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-dialog-container {
+	border-radius: 4px !important;
+	overflow-x: hidden !important;
+	padding: 24px 15px !important;
+	margin-top: 44px !important;
+	min-height: 200px!important;
+}
+
+.btn-add {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+	border: 1px solid #06125a;
+	color: black;
+    cursor: pointer;
+	width: 150px;
+	padding: 20px;
+	height: 15px;
+    box-sizing: border-box;
+	box-shadow: 2px 3px 2px #888888;
+	justify-content: center;
+    &:hover {
+	  background-color: #06125a;
+	  color: white;
+    }
+
+}
+
+.btn-cancel {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+	border: 1px solid #B22222;
+	width: 150px;
+	text-align: center;
+	cursor: pointer;
+	height: 15px;
+	margin-left: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+	box-shadow: 2px 3px 2px #888888;
+	justify-content: center;
+    &:hover {
+	  background-color: #B22222;
+      color: white;
+    }
+
+}
+
