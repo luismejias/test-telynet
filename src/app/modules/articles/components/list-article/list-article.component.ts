@@ -56,6 +56,7 @@ export class ListArticleComponent implements OnInit, OnDestroy {
   }
 
   getArticles() {
+    this.isLoadingResults = true;
     this.subscription.add(
       this.articlesService.getArticles().pipe(
         finalize(() => {
@@ -147,14 +148,11 @@ export class ListArticleComponent implements OnInit, OnDestroy {
     this.snackBar.open(message, action, {
       duration: 2000,
       horizontalPosition: this.horizontalPosition,
-      verticalPosition: this.verticalPosition,
-      panelClass: ['example']
+      verticalPosition: this.verticalPosition
     });
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
-
-
 }
